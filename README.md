@@ -4,7 +4,7 @@
 
  1. Create a file named `config`
  2. All the files in this repository should be in the `config` file
- 3. In your .config file you have to create a file named nvim and inside the file create a file called `init.vim`
+ 3. In your .config file you have to create a folder named nvim and inside the file create a file called `init.vim`
  And paste this code
 ```
  set runtimepath^=~/.vim runtimepath+=~/.vim/after
