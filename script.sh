@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Check if the 'config' directory already exists in the home directory
-if [ ! -d ~/config ]; then
-    mkdir ~/config
+# Check if the '.config' directory already exists in the home directory
+if [ ! -d ~/.config ]; then
+    mkdir ~/.config
 fi
 
-# Move the necessary files
-mv .vimrc ~/config
-mv .vim ~/config
+# Move the necessary files from src directory
+mv src/.vimrc ~/.config
+mv src/.vim ~/.config
 
 # Check if the '.config/nvim' directory already exists
 if [ ! -d ~/.config/nvim ]; then
@@ -15,4 +15,4 @@ if [ ! -d ~/.config/nvim ]; then
 fi
 
 # Move the 'init.vim' file to the '.config/nvim' directory
-mv init.vim ~/.config/nvim
+mv src/init.vim ~/.config/nvim
