@@ -26,7 +26,5 @@
  Plug 'mhinz/vim-signify' "Show if a line was added or removed
  Plug 'Yggdroot/indentLine' "Show a line 
  Plug 'scrooloose/nerdcommenter' "comenta la line
- Plug 'junegunn/fzf'
- Plug 'junegunn/fzf.vim'
 
  call plug#end() 

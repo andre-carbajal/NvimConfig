@@ -13,17 +13,22 @@ else
 fi
 
 echo
-echo "📦 Copying Vim configuration..."
-if [ -d "src/.vim" ]; then
-    cp -r src/.vim ~/.config
-    echo "   ✅ Vim configuration copied to ~/.config/.vim"
-else
-    echo "   ⚠️  src/.vim directory not found"
-fi
-
-echo
 echo "⚙️  Copying Neovim configuration..."
 if [ -d "src/nvim" ]; then
+    if [ -d ~/.config/nvim ]; then
+        echo "   ⚠️  Existing nvim configuration found at ~/.config/nvim"
+        echo "   ❓ Do you want to remove it and install the new configuration? (y/N)"
+        read -r response
+        if [[ "$response" =~ ^[Yy]$ ]]; then
+            echo "   ➤ Removing old nvim configuration..."
+            rm -rf ~/.config/nvim
+            echo "   ✅ Old nvim configuration removed"
+        else
+            echo "   ❌ Installation cancelled by user"
+            echo "🛑 Configuration setup aborted!"
+            exit 1
+        fi
+    fi
     cp -r src/nvim ~/.config
     echo "   ✅ Neovim configuration copied to ~/.config/nvim"
 else

@@ -10,8 +10,9 @@
  set relativenumber
  set laststatus=2
 
- so ~/.config/.vim/plugins.vim
- so ~/.config/.vim/plugins-config.vim
+ so ~/.config/nvim/vim-plug/plugins.vim
+ so ~/.config/nvim/vim-plug/plugins-config.vim
+ so ~/.config/nvim/vim-plug/coc.vim
 
  colorscheme gruvbox
 
