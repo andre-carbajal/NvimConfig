@@ -13,19 +13,19 @@ else
 fi
 
 echo
-echo "📦 Moving Vim configuration..."
+echo "📦 Copying Vim configuration..."
 if [ -d "src/.vim" ]; then
-    mv src/.vim ~/.config
-    echo "   ✅ Vim configuration moved to ~/.config/.vim"
+    cp -r src/.vim ~/.config
+    echo "   ✅ Vim configuration copied to ~/.config/.vim"
 else
     echo "   ⚠️  src/.vim directory not found"
 fi
 
 echo
-echo "⚙️  Moving Neovim configuration..."
+echo "⚙️  Copying Neovim configuration..."
 if [ -d "src/nvim" ]; then
-    mv src/nvim ~/.config
-    echo "   ✅ Neovim configuration moved to ~/.config/nvim"
+    cp -r src/nvim ~/.config
+    echo "   ✅ Neovim configuration copied to ~/.config/nvim"
 else
     echo "   ⚠️  src/nvim directory not found"
 fi
