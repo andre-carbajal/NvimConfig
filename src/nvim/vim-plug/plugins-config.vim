@@ -11,3 +11,6 @@
  
  "Open NERDTree
  nmap <Leader>nt :NERDTreeFind<CR>
+
+ "Show quotes in JSON files
+ let g:vim_json_conceal = 0
