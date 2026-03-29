@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-java', 'coc-yaml', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-kotlin']
+let g:coc_global_extensions = ['coc-java', 'coc-yaml', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-kotlin', 'coc-docker']
 
 " Mappings Go To's
 nmap <silent> gd <Plug>(coc-definition)
